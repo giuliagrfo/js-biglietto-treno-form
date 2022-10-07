@@ -13,10 +13,10 @@ const userName = document.getElementById('name').value;
 // console.log('nome utente', document.getElementById('name').value);
 
 // Chiedere numero di chilometri che vuole percorrere
-const kilometres = document.getElementById('km');
+const kilometres = document.getElementById('km').value;
 
 // Chiedere l'età del passeggero
-const userAge = document.getElementById('age');
+const userAge = document.getElementById('age').value;
 
 // Calcolare il prezzo totale del viaggio
 const priceOfKilometer = 0.21;
@@ -51,14 +51,22 @@ buttonGenerator.addEventListener('click', function(){
     
 })
 
+buttonGenerator.addEventListener('click', function() {
+    if (userAge < 18) {
+        const finalPrice18 = ticketPrice - discountValue18.toFixed(2);
+        document.getElementById('price').innerHTML = `${finalPrice18} $`;
+        
+    } else if (userAge > 65) {
+        document.getElementById('price').innerHTML = `${finalPrice65} $`;
+    } else {
+        document.getElementById('price').innerHTML = `${finalPrice} $`;
+    }
 
-// if (userAge < 18) {
-//     document.getElementById('price').innerHTML = `From ${departure} to ${destination} the price is: ${finalPrice18} $`;
-// } else if (userAge > 65) {
-//     document.getElementById('price').innerHTML = `From ${departure} to ${destination} the price is: ${finalPrice65} $`;
-// } else {
-//     document.getElementById('price').innerHTML = `From ${departure} to ${destination} the price is: ${finalPrice} $`;
-// }
+
+})
+
+
+
 
 
 
