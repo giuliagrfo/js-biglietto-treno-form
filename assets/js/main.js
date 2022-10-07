@@ -10,6 +10,7 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
 */
 // Chiedere nome del passeggero
 const userName = document.getElementById('name');
+// console.log('nome utente', document.getElementById('name').value);
 
 // Chiedere numero di chilometri che vuole percorrere
 const kilometres = document.getElementById('km');
@@ -42,6 +43,12 @@ const finalPrice65 = ticketPrice - discountValue65.toFixed(2);
 
 const buttonGenerator = document.getElementById('genera');
 
+
+buttonGenerator.addEventListener('click', function(){
+    const userName = document.getElementById('name');
+    console.log(userName.value);
+        
+})
 
 
 // if (userAge < 18) {
