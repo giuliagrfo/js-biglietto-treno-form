@@ -78,8 +78,7 @@ body {
     line-height: 55px;
 }
 
-
-.nome_utente {
-    background-color: gray;
-    height: 300px;
+#biglietto {
+    background-color: rgb(177, 42, 42);
+    height: 150px;
 }

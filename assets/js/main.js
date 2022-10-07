@@ -9,7 +9,7 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
 
 */
 // Chiedere nome del passeggero
-const userName = document.getElementById('name');
+const userName = document.getElementById('name').value;
 // console.log('nome utente', document.getElementById('name').value);
 
 // Chiedere numero di chilometri che vuole percorrere
@@ -45,9 +45,10 @@ const buttonGenerator = document.getElementById('genera');
 
 
 buttonGenerator.addEventListener('click', function(){
-    const userName = document.getElementById('name');
-    console.log(userName.value);
-        
+    const userName = document.getElementById('name').value;
+    // console.log(userName.value);
+    document.getElementById('nome_utente').innerHTML = `${userName}`
+    
 })
 
 
