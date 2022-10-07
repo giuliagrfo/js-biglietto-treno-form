@@ -54,7 +54,7 @@ buttonGenerator.addEventListener('click', function(){
 buttonGenerator.addEventListener('click', function() {
     if (userAge < 18) {
         const finalPrice18 = ticketPrice - discountValue18.toFixed(2);
-        document.getElementById('price').innerHTML = `${finalPrice18} $`;
+        console.log(finalPrice18);
         
     } else if (userAge > 65) {
         document.getElementById('price').innerHTML = `${finalPrice65} $`;
