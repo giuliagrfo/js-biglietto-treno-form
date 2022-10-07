@@ -48,21 +48,16 @@ buttonGenerator.addEventListener('click', function(){
     const userName = document.getElementById('name').value;
     // console.log(userName.value);
     document.getElementById('nome_utente').innerHTML = `${userName}`
-    
-})
 
-buttonGenerator.addEventListener('click', function() {
     if (userAge < 18) {
-        const finalPrice18 = ticketPrice - discountValue18.toFixed(2);
-        console.log(finalPrice18);
-        
+        document.getElementById('price').innerHTML = `${finalPrice18} $`;
     } else if (userAge > 65) {
         document.getElementById('price').innerHTML = `${finalPrice65} $`;
     } else {
         document.getElementById('price').innerHTML = `${finalPrice} $`;
     }
-
-
+    
+    
 })
 
 
