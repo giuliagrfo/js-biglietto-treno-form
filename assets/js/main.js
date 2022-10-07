@@ -22,7 +22,6 @@ const userAge = document.getElementById('age').value;
 const priceOfKilometer = 0.21;
 
 const ticketPrice = kilometres * 0.21;
-const finalPrice = ticketPrice
 
 // Applicare uno sconto del 20% per i minorenni
 const percentageUnder18= 20;
@@ -54,7 +53,7 @@ buttonGenerator.addEventListener('click', function(){
     } else if (userAge > 65) {
         document.getElementById('price').innerHTML = `${finalPrice65} $`;
     } else {
-        document.getElementById('price').innerHTML = `${finalPrice} $`;
+        document.getElementById('price').innerHTML = `${ticketPrice} $`;
     }
     
     
