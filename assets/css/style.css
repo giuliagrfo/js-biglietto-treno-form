@@ -67,18 +67,11 @@ body {
     border-radius: 28px;
 }
 
-.info {
-    position: relative;
-    color: white;
-}
-
-.info p {
-    text-align: center;
-    font-size: 50px;
-    line-height: 55px;
-}
-
 #biglietto {
     background-color: rgb(177, 42, 42);
     height: 150px;
+}
+
+#price, #nome_utente {
+    font-size: 16px;
 }
