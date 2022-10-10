@@ -28,7 +28,18 @@ const buttonGenerator = document.getElementById('genera');
 buttonGenerator.addEventListener('click', function(){
     const userName = document.getElementById('name').value;
     // console.log(userName.value);
-    document.getElementById('nome_utente').innerHTML = `${userName}`
+    const userAge = document.getElementById('age').value;
+
+    if (userAge < 18) {
+        document.getElementById('nome_utente').innerHTML = `${userName} (Sconto applicato Under18)`
+
+    } else if (userAge > 65) {
+        document.getElementById('nome_utente').innerHTML = `${userName} (Sconto applicato Over65)`
+
+    } else {
+        document.getElementById('nome_utente').innerHTML = `${userName}`
+    }
+    
     
     // Calcolare il prezzo totale del viaggio
     const kilometres = document.getElementById('km').value;
@@ -51,7 +62,6 @@ buttonGenerator.addEventListener('click', function(){
     const discountValue65 = (ticketPrice / 100) * percentageOver65; 
     
     const finalPrice65 = ticketPrice - discountValue65.toFixed(2);
-    const userAge = document.getElementById('age').value;
     
     
     if (userAge < 18) {
