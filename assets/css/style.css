@@ -75,3 +75,8 @@ body {
 #price, #nome_utente {
     font-size: 16px;
 }
+
+#genera {
+    background-color: #006c6799;
+    color: white;
+}
